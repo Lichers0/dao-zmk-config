@@ -54,8 +54,50 @@
         timeout-ms = <50>;
         key-positions = <34 35>;
         bindings = <&kp RET>;
-      };      
-    };
+      };   
+      
+      combo_lgui {
+        timeout-ms = <50>;
+        key-positions = <15 16>;
+        bindings = <&sk LGUI>;
+      };
+      combo_lshft {
+        timeout-ms = <50>;
+        key-positions = <16 17>;
+        bindings = <&sk LSHFT>;
+      };    
+      combo_lctrl {
+        timeout-ms = <50>;
+        key-positions = <17 18>;
+        bindings = <&sk LCTRL>;
+      };       
+      combo_lalt {
+        timeout-ms = <50>;
+        key-positions = <16 18>;
+        bindings = <&sk LALT>;
+      };             
+
+      combo_lgui {
+        timeout-ms = <50>;
+        key-positions = <23 24>;
+        bindings = <&sk LGUI>;
+      };
+      combo_lshft {
+        timeout-ms = <50>;
+        key-positions = <22 23>;
+        bindings = <&sk LSHFT>;
+      };    
+      combo_lctrl {
+        timeout-ms = <50>;
+        key-positions = <21 22>;
+        bindings = <&sk LCTRL>;
+      };       
+      combo_lalt {
+        timeout-ms = <50>;
+        key-positions = <21 23>;
+        bindings = <&sk LALT>;
+      };             
+};
         keymap {
                 compatible = "zmk,keymap";
 
@@ -63,17 +105,17 @@
 // .--------------------------------------------------------------.       .-------------------------------------------------------------.
 // |   ESC        |    Q    |    W   |   E    |    R    |    T    |       |   Y     |    U    |    I    |    O    |     P    |    [     |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
-// |   CTRL/Tab   |    A    |    S   |   D    |    F    |    G    |       |   H     |    J    |    K    |    L    |     ;    |     '    |
+// |   CTRL/Tab   |    A    |    S   |   D    | F|LCTL  |    G    |       |   H     | J|LCTL  |    K    |    L    |     ;    |     '    |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
 // |   SHFT       |    Z    |    X   |   C    |    V    | B | MY1 |       | N | MY1 |    M    |    ,    |    .    |     /    | ` | ALT  |
 // '---------------------------------+--------+---------+---------+       |---------+---------+---------+-------------------------------'
-//                                   |  GUI   |   MO1   |   ENT   |       |  SPC    |   BKSP  |  CAPS   |
+//                                   |  GUI   |   MY2   | repeat  |       |  SPC    |   BKSP  |  CAPS   |
 //                                   '--------+---------+---------'       '---------+---------+---------'
                 bindings = <
-   &trans &kp ESC        &kp Q       &kp W     &kp E     &kp R            &kp T      &kp Y     &kp U         &kp I      &kp O    &kp P     &kp LEFT_BRACE &trans
-          &mt LCTRL TAB  &kp A       &kp S     &kp D     &kp F            &kp G      &kp H     &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-          &kp LSHFT      &kp Z       &kp X     &kp C     &lt MY1 V        &lt MY1 B  &kp N     &kp M         &kp COMMA  &kp DOT  &kp FSLH  &mt RALT GRAVE
-                                     &kp LGUI  &mo MY2   &lt NAVI RET     &kp SPACE  &kp BSPC  &kp CAPSLOCK
+   &trans &kp ESC        &kp Q       &kp W     &kp E     &kp R        &kp T              &kp Y      &kp U        &kp I         &kp O    &kp P     &kp LEFT_BRACE  &trans
+          &mt LCTRL TAB  &kp A       &kp S     &kp D     &lt LCTRL F  &kp G              &kp H      &lt LCTRL J  &kp K         &kp L    &kp SEMI  &kp SQT
+          &kp LSHFT      &kp Z       &kp X     &kp C     &kp V        &lt MY1 B          &kp MY1 N  &kp M        &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
+                                               &kp LGUI  &mo MY2      &key_repeat        &kp SPACE  &kp BSPC     &kp CAPSLOCK  
                         >;
                 };
                 
@@ -104,13 +146,13 @@
 // |---------+---------+--------+---------+---------+---------|       |---------+---------+---------+---------+---------+---------|
 // |         |         |        |    <    |    [    |    /    |       |    `    |    ]    |    >    |         |         |         |
 // '----------------------------+---------+---------+---------+       |---------+---------+---------+-----------------------------'
-//                              |   GUI   |         |   MO3   |       |         |         |         |
+//                              |   GUI   |         |   MO3   |       |  NUMB   |  NAVI   |         |
 //                              '---------+---------+---------'       '---------+---------+---------'
                         bindings = <
    &trans  &trans  &trans  &kp TILDE  &kp PLUS   &kp LBRC  &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &trans  &trans  &trans
            &trans  &trans  &trans     &kp EQUAL  &kp LPAR  &kp PIPE         &kp SQT    &kp RPAR  &kp UNDER  &trans     &trans  &trans
            &trans  &trans  &trans     &kp LT     &kp LBKT  &kb FSLH         &kb GRAVE  &kb RBKT  &kb GT     &trans     &trans  &trans
-                                      &kp LGUI   &trans    &mo ADJUST       &trans     &trans    &trans
+                                      &kp LGUI   &trans    &mo ADJUST       &mo NUMB   &mo NAVI    &trans
                         >;
                 
                 };
