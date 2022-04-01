@@ -56,43 +56,43 @@
         bindings = <&kp RET>;
       };   
       
-      combo_lgui {
+      combo_lgui1 {
         timeout-ms = <50>;
         key-positions = <15 16>;
         bindings = <&sk LGUI>;
       };
-      combo_lshft {
+      combo_lshft1 {
         timeout-ms = <50>;
         key-positions = <16 17>;
         bindings = <&sk LSHFT>;
       };    
-      combo_lctrl {
+      combo_lctrl1 {
         timeout-ms = <50>;
         key-positions = <17 18>;
         bindings = <&sk LCTRL>;
       };       
-      combo_lalt {
+      combo_lalt1 {
         timeout-ms = <50>;
         key-positions = <16 18>;
         bindings = <&sk LALT>;
       };             
 
-      combo_lgui {
+      combo_lgui2 {
         timeout-ms = <50>;
         key-positions = <23 24>;
         bindings = <&sk LGUI>;
       };
-      combo_lshft {
+      combo_lshft2 {
         timeout-ms = <50>;
         key-positions = <22 23>;
         bindings = <&sk LSHFT>;
       };    
-      combo_lctrl {
+      combo_lctrl2 {
         timeout-ms = <50>;
         key-positions = <21 22>;
         bindings = <&sk LCTRL>;
       };       
-      combo_lalt {
+      combo_lalt2 {
         timeout-ms = <50>;
         key-positions = <21 23>;
         bindings = <&sk LALT>;
