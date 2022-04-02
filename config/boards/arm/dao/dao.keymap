@@ -16,8 +16,6 @@
 #define NUMB 3
 #define NAVI 4
 #define ADJUST 5
-#define T2 6
-#define T3 7
 
 / {
 
