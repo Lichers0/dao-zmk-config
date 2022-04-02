@@ -150,7 +150,7 @@
                         bindings = <
    &trans  &trans  &trans  &kp TILDE  &kp PLUS   &kp LBRC  &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &trans  &trans  &trans
            &trans  &trans  &trans     &kp EQUAL  &kp LPAR  &kp PIPE         &kp SQT    &kp RPAR  &kp UNDER  &trans     &trans  &trans
-           &trans  &trans  &trans     &kp LT     &kp LBKT  &kb FSLH         &kp GRAVE  &kp RBKT  &kp GT     &trans     &trans  &trans
+           &trans  &trans  &trans     &kp LT     &kp LBKT  &kp FSLH         &kp GRAVE  &kp RBKT  &kp GT     &trans     &trans  &trans
                                       &kp LGUI   &trans    &mo ADJUST       &mo NUMB   &mo NAVI    &trans
                         >;
                 
