@@ -14,8 +14,6 @@
 #define NUMB 1
 #define NAVI 2
 #define ADJUST 3
-#define MY1 4
-#define MY2 5
 
 / {
 
@@ -113,8 +111,8 @@
                 bindings = <
    &trans &kp ESC        &kp Q       &kp W     &kp E     &kp R        &kp T              &kp Y      &kp U        &kp I         &kp O    &kp P     &kp LEFT_BRACE  &trans
           &mt LCTRL TAB  &kp A       &kp S     &kp D     &lt LCTRL F  &kp G              &kp H      &lt LCTRL J  &kp K         &kp L    &kp SEMI  &kp SQT
-          &kp LSHFT      &kp Z       &kp X     &kp C     &kp V        &lt MY1 B          &kp MY1 N  &kp M        &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
-                                               &kp LGUI  &mo MY2      &key_repeat        &kp SPACE  &kp BSPC     &kp CAPSLOCK  
+          &kp LSHFT      &kp Z       &kp X     &kp C     &kp V        &lt MY1 B          &kp 1 N  &kp M        &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
+                                               &kp LGUI  &mo 2      &key_repeat        &kp SPACE  &kp BSPC     &kp CAPSLOCK  
                         >;
                 };
                 
