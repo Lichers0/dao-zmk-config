@@ -12,10 +12,10 @@
 
 #define QWERTY 0
 #define MY1 1
-#define MY2 3
-#define NUMB 4
-#define NAVI 5
-#define ADJUST 6
+#define MY2 2
+#define NUMB 3
+#define NAVI 4
+#define ADJUST 5
 
 / {
 
