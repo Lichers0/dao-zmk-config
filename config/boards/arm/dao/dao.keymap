@@ -11,9 +11,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define QWERTY 0
-#define NUMB 1
-#define NAVI 2
-#define ADJUST 3
+#define MY1 1
+#define MY2 3
+#define NUMB 4
+#define NAVI 5
+#define ADJUST 6
 
 / {
 
@@ -111,9 +113,47 @@
                         bindings = <
    &trans &kp ESC        &kp Q       &kp W     &kp E     &kp R        &kp T              &kp Y      &kp U        &kp I         &kp O    &kp P     &kp LEFT_BRACE  &trans
           &mt LCTRL TAB  &kp A       &kp S     &kp D     &lt LCTRL F  &kp G              &kp H      &lt LCTRL J  &kp K         &kp L    &kp SEMI  &kp SQT
-          &kp LSHFT      &kp Z       &kp X     &kp C     &kp V        &lt 1 B          &lt 1 N  &kp M        &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
-                                               &kp LGUI  &mo 1      &key_repeat        &kp SPACE  &kp BSPC     &kp CAPSLOCK  
+          &kp LSHFT      &kp Z       &kp X     &kp C     &kp V        &lt MY1 B          &lt MY1 N  &kp M        &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
+                                               &kp LGUI  &mo MY2      &key_repeat        &kp SPACE  &kp BSPC     &kp CAPSLOCK  
                         >;
+                };
+                
+                my_num_1 {
+// .--------------------------------------------------------------.       .-----------------------------------------------------------.
+// |              |    !    |    @   |   #    |    $    |    %    |       |   ^   |    &    |    *    |    (    |     )    |          |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |              |    1    |    2   |   3    |    4    |    5    |       |   6   |    7    |    8    |    9    |     0    |          |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |              |         |        |        |         |         |       |       |         |         |         |          |          |
+// '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
+//                                   |        |         |         |       |       |         |         |
+//                                   '--------+---------+---------'       '-------+---------+---------'
+                        bindings = <
+   &trans  &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans  &trans
+           &trans  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
+           &trans  &trans    &trans  &trans    &trans    &trans           &trans     &trans    &trans    &trans    &trans    &trans
+                                     &trans    &trans    &trans           &trans     &trans    &trans
+                        >;
+                
+                };
+                
+                my_sym_2 {
+// .----------------------------------------------------------.       .-----------------------------------------------------------.
+// |         |         |   ~    |    +    |    {    |    \    |       |    "    |    }    |    -    |    ?    |         |         |
+// |---------+---------+--------+---------+---------+---------|       |---------+---------+---------+---------+---------+---------|
+// |         |         |        |    =    |    (    |    |    |       |    '    |    )    |    _    |         |         |         |
+// |---------+---------+--------+---------+---------+---------|       |---------+---------+---------+---------+---------+---------|
+// |         |         |        |    <    |    [    |    /    |       |    `    |    ]    |    >    |         |         |         |
+// '----------------------------+---------+---------+---------+       |---------+---------+---------+-----------------------------'
+//                              |   GUI   |         |   MO3   |       |  NUMB   |  NAVI   |         |
+//                              '---------+---------+---------'       '---------+---------+---------'
+                        bindings = <
+   &trans  &trans  &trans  &kp TILDE  &kp PLUS   &kp LBRC  &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &trans  &trans  &trans
+           &trans  &trans  &trans     &kp EQUAL  &kp LPAR  &kp PIPE         &kp SQT    &kp RPAR  &kp UNDER  &trans     &trans  &trans
+           &trans  &trans  &trans     &kp LT     &kp LBKT  &kb FSLH         &kb GRAVE  &kb RBKT  &kb GT     &trans     &trans  &trans
+                                      &kp LGUI   &trans    &mo ADJUST       &mo NUMB   &mo NAVI    &trans
+                        >;
+                
                 };
                 
                 lower_layer {
