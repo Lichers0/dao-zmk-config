@@ -31,6 +31,12 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: update
+        run: sudo apt update
+      - name: remove old
+        run: sudo apt purge --auto-remove cmake
+      - name: install new cmake
+        run: sudo apt install cmake        
       - name: West Init
         run: west init -l config
       - name: West Update
