@@ -41,6 +41,7 @@ jobs:
           cd cmake-3.23.0
           ./bootstrap
           make
+          make install
       - name: Check version
         run: cmake --version
       - name: West Init
