@@ -33,13 +33,16 @@ jobs:
             ${{ runner.os }}-
       - name: cmake
         run: |
+          apt purge --auto-remove -y cmake
           apt update && apt upgrade -y
           apt install build-essential checkinstall zlib1g-dev libssl-dev wget -y
           wget https://github.com/Kitware/CMake/releases/download/v3.23.0/cmake-3.23.0.tar.gz
           tar -zxvf cmake-3.23.0.tar.gz
           cd cmake-3.23.0
           ./bootstrap
-          make       
+          make
+      - name: Check version
+        run: cmake --version
       - name: West Init
         run: west init -l config
       - name: West Update
