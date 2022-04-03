@@ -31,12 +31,15 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: update
-        run: apt update
-      - name: remove old
-        run: apt purge --auto-remove -y cmake
-      - name: install new cmake
-        run: apt install -y cmake        
+      - name: cmake
+        run: |
+          apt purge --auto-remove -y cmake
+          apt install build-essential checkinstall zlib1g-dev libssl-dev -y
+          wget https://github.com/Kitware/CMake/releases/download/v3.23.0/cmake-3.23.0.tar.gz
+          tar -zxvf cmake-{version number}.tar.gz
+          cd cmake-{version number}
+          ./bootstrap
+          make       
       - name: West Init
         run: west init -l config
       - name: West Update
