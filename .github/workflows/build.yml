@@ -34,9 +34,9 @@ jobs:
       - name: update
         run: apt update
       - name: remove old
-        run: apt purge --auto-remove cmake
+        run: apt purge --auto-remove -y cmake
       - name: install new cmake
-        run: apt install cmake        
+        run: apt install -y cmake        
       - name: West Init
         run: west init -l config
       - name: West Update
