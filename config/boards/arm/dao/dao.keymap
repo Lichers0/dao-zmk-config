@@ -56,7 +56,7 @@
       
       combo_lgui_l {
         timeout-ms = <50>;
-        key-positions = <15 16>;
+        key-positions = <18 19>;
         bindings = <&sk LGUI>;
       };
       combo_lshft_l {
@@ -77,7 +77,7 @@
 
       combo_lgui_r {
         timeout-ms = <50>;
-        key-positions = <23 24>;
+        key-positions = <20 21>;
         bindings = <&sk LGUI>;
       };
       combo_lshft_r {
@@ -94,7 +94,13 @@
         timeout-ms = <50>;
         key-positions = <21 23>;
         bindings = <&sk LALT>;
-      };             
+      };   
+      
+      combo_number {
+        timeout-ms = <50>;
+        key-positions = <30 33>;
+        bindings = <&tog MY1>;
+      };          
 };    
 
         keymap {
@@ -104,17 +110,17 @@
 // .--------------------------------------------------------------.       .-------------------------------------------------------------.
 // |   ESC        |    Q    |    W   |   E    |    R    |    T    |       |   Y     |    U    |    I    |    O    |     P    |    [     |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
-// |   CTRL/Tab   |    A    |    S   |   D    | F|LCTL  |    G    |       |   H     | J|LCTL  |    K    |    L    |     ;    |     '    |
+// |   CTRL/Tab   |    A    |    S   |   D    |    F    | G|NAVI  |       |   H     |    J    |    K    |    L    |     ;    |     '    |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
-// |   SHFT       |    Z    |    X   |   C    |    V    | B | MY1 |       | N | MY1 |    M    |    ,    |    .    |     /    | ` | ALT  |
+// |   SHFT       |    Z    |    X   |   C    |  V|MY1  |    B    |       |   N     |  M|MY1  |    ,    |    .    |     /    | ` | ALT  |
 // '---------------------------------+--------+---------+---------+       |---------+---------+---------+-------------------------------'
 //                                   |  GUI   |   MY2   | repeat  |       |  SPC    |   BKSP  |  CAPS   |
 //                                   '--------+---------+---------'       '---------+---------+---------'
                         bindings = <
-   &trans &kp ESC        &kp Q       &kp W     &kp E     &kp R        &kp T              &kp Y      &kp U        &kp I         &kp O    &kp P     &kp LEFT_BRACE  &trans
-          &mt LCTRL TAB  &kp A       &kp S     &kp D     &lt LCTRL F  &kp G              &kp H      &lt LCTRL J  &kp K         &kp L    &kp SEMI  &kp SQT
-          &kp LSHFT      &kp Z       &kp X     &kp C     &kp V        &lt MY1 B          &lt MY1 N  &kp M        &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
-                                               &kp LGUI  &mo MY2      &key_repeat        &kp SPACE  &kp BSPC     &kp CAPSLOCK  
+   &trans &kp ESC        &kp Q       &kp W     &kp E     &kp R      &kp T          &kp Y      &kp U      &kp I         &kp O    &kp P     &kp LEFT_BRACE  &trans
+          &mt LCTRL TAB  &kp A       &kp S     &kp D     &kp F      &lt NAVI G     &kp H      &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
+          &kp LSHFT      &kp Z       &kp X     &kp C     &lt MY1 V  &kp B          &kp N      &lt MY1 M  &kp COMMA     &kp DOT  &kp FSLH  &mt RALT GRAVE
+                                               &kp LGUI  &tog MY2   &key_repeat    &kp SPACE  &kp BSPC   &kp CAPSLOCK  
                         >;
                 };
                 
@@ -145,13 +151,13 @@
 // |---------+---------+--------+---------+---------+---------|       |---------+---------+---------+---------+---------+---------|
 // |         |         |        |    <    |    [    |    /    |       |    `    |    ]    |    >    |         |         |         |
 // '----------------------------+---------+---------+---------+       |---------+---------+---------+-----------------------------'
-//                              |   GUI   |         |   MO3   |       |  NUMB   |  NAVI   |         |
+//                              |   GUI   |   MY2   |   MO3   |       |  NUMB   |  NAVI   |         |
 //                              '---------+---------+---------'       '---------+---------+---------'
                         bindings = <
    &trans  &trans  &trans  &kp TILDE  &kp PLUS   &kp LBRC  &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &trans  &trans  &trans
            &trans  &trans  &trans     &kp EQUAL  &kp LPAR  &kp PIPE         &kp SQT    &kp RPAR  &kp UNDER  &trans     &trans  &trans
            &trans  &trans  &trans     &kp LT     &kp LBKT  &kp FSLH         &kp GRAVE  &kp RBKT  &kp GT     &trans     &trans  &trans
-                                      &kp LGUI   &trans    &mo ADJUST       &mo NUMB   &mo NAVI    &trans
+                                      &kp LGUI   &tog MY2  &mo ADJUST       &mo NUMB   &mo NAVI    &trans
                         >;
                 
                 };
@@ -167,18 +173,18 @@
 //                                   |  GUI   |         |   MO3   |       |   ,   |    .    |   ?     |
 //                                   '--------+---------+---------'       '-------+---------+---------'
                         bindings = <
-   &trans &kp ESC    &kp N1       &kp N2            &kp N3             &kp N4               &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0     &kp GRAVE &trans
-   &trans     &kp EXCL     &kp AT            &kp HASH           &kp DLLR             &kp PRCNT         &kp CARET                &kp AMPS                   &kp KP_MULTIPLY        &kp LPAR                 &kp RPAR   &kp COLON
-   &kp LSHFT  &trans       &kp KP_PLUS       &kp KP_MINUS       &kp LEFT_BRACE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET        &kp RIGHT_BRACE            &kp KP_EQUAL           &kp UNDERSCORE           &trans     &trans
-                                             &kp LGUI           &trans               &mo ADJUST        &kp KP_N1                &kp KP_N2                  &kp KP_N3
+   &trans  &kp ESC    &kp N1    &kp N2       &kp N3        &kp N4          &kp N5            &kp N6                   &kp N7                     &kp N8                 &kp N9                   &kp N0     &kp GRAVE &trans
+           &trans     &kp EXCL  &kp AT       &kp HASH      &kp DLLR        &kp PRCNT         &kp CARET                &kp AMPS                   &kp KP_MULTIPLY        &kp LPAR                 &kp RPAR   &kp COLON
+           &kp LSHFT  &trans    &kp KP_PLUS  &kp KP_MINUS  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET        &kp RIGHT_BRACE            &kp KP_EQUAL           &kp UNDERSCORE           &trans     &trans
+                                             &kp LGUI      &trans               &mo ADJUST        &kp KP_N1                &kp KP_N2                  &kp KP_N3
                         >;
                 };
                 
                 raise_layer {
 // .----------------------------------------------------------------.       .-----------------------------------------------------------------.
-// |   CMD+SHIFT+4  |       |   PU   |   UP   |    PD    |   HOME   |       |  HOME   |    PU    |    UP   |   PD    |          | CMD+SHIFT+4 |
+// |   CMD+SHIFT+4  |       |   PU   |   UP   |    PD    |   HOME   |       |  HOME   |    PD    |   PU    |   END    |          | CMD+SHIFT+4 |
 // |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
-// |                |       |  LEFT  |  DOWN  |   RIGHT  |   END    |       |  END    |   LEFT   |   DOWN  |  RIGHT  |          |             |
+// |                |       |  LEFT  |  DOWN  |   RIGHT  |   END    |       |  LEFT   |   DOWN   |   UP    |  RIGHT  |          |             |
 // |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
 // |     OUT_TOG    |       |        |        |CTRL+LEFT |CTRL+RIGHT|       |CTRL+LEFT|CTRL+RIGHT|         |         |          |   OUT_TOG   |
 // '---------------------------------+--------+----------+----------+       |---------+----------+---------+----------------------------------'
@@ -186,10 +192,10 @@
 //                                   '--------+----------+----------'       '---------+----------+---------'
 
                         bindings = <
-   &trans &kp LG(LS(N4))  &trans     &kp PAGE_UP        &kp UP_ARROW      &kp PAGE_DOWN       &kp HOME                &kp CARET            &kp PAGE_UP             &kp UP_ARROW       &kp PAGE_DOWN      &kp HOME     &kp LG(LS(N4)) &trans
-   &trans          &trans     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW     &kp END                 &kp MINUS            &kp LEFT_ARROW          &kp DOWN_ARROW     &kp RIGHT_ARROW    &kp END      &trans
-   &out OUT_TOG    &trans     &trans             &trans            &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)     &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)     &trans             &trans             &trans       &out OUT_TOG
-                              &kp LGUI           &mo ADJUST        &trans              &trans   &trans   &trans
+   &trans &kp LG(LS(N4))  &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN       &kp HOME               &kp HOME            &kp PAGE_DOWN        &kp PAGE_UP   &kp END         &trans  &kp LG(LS(N4)) &trans
+          &trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END                &kp LEFT_ARROW      &kp DOWN_ARROW       &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
+          &out OUT_TOG    &trans  &trans          &trans          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)    &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans        &trans           &trans    &out OUT_TOG
+                                                  &kp LGUI        &mo ADJUST          &trans                 &trans              &trans               &trans
                         >;
                 };
 
