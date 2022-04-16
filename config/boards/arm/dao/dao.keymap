@@ -153,17 +153,17 @@
 // .----------------------------------------------------------.       .-----------------------------------------------------------.
 // |         |         |   ~    |    +    |    {    |    \    |       |    "    |    }    |    -    |    ?    |         |         |
 // |---------+---------+--------+---------+---------+---------|       |---------+---------+---------+---------+---------+---------|
-// |         |         |        |    =    |    (    |    |    |       |    '    |    )    |    _    |         |         |         |
+// |         |         |        |    =    |  ( MN1  | | NAVI  |       |    '    |    )    |    _    |         |         |         |
 // |---------+---------+--------+---------+---------+---------|       |---------+---------+---------+---------+---------+---------|
 // |         |         |        |    <    |    [    |    /    |       |    `    |    ]    |    >    |         |         |         |
 // '----------------------------+---------+---------+---------+       |---------+---------+---------+-----------------------------'
 //                              |   GUI   |   MY2   |   MO3   |       |   SPC   |  BSPC   |         |
 //                              '---------+---------+---------'       '---------+---------+---------'
                         bindings = <
-   &trans  &trans  &trans  &kp TILDE  &kp PLUS   &kp LBRC  &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &trans  &trans  &trans
-           &trans  &trans  &trans     &kp EQUAL  &kp LPAR  &kp PIPE         &kp SQT    &kp RPAR  &kp UNDER  &trans     &trans  &trans
-           &trans  &trans  &trans     &kp LT     &kp LBKT  &kp FSLH         &kp GRAVE  &kp RBKT  &kp GT     &trans     &trans  &trans
-                                      &kp LGUI   &tog MY2  &mo ADJUST       &kp SPACE  &kp BSPC  &mo NUMB
+   &none  &none  &none  &kp TILDE  &kp PLUS   &kp LBRC      &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &none  &none  &none
+          &none  &none  &none      &kp EQUAL  &lt MN1 LPAR  &lt NAVI PIPE    &kp SQT    &kp RPAR  &kp UNDER  &none      &none  &none
+          &none  &none  &none      &kp LT     &kp LBKT      &kp FSLH         &kp GRAVE  &kp RBKT  &kp GT     &none      &none  &none
+                                   &kp LGUI   &tog MY2      &mo ADJUST       &kp SPACE  &kp BSPC  &mo NUMB
                         >;
                 
                 };
