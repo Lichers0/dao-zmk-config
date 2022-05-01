@@ -207,20 +207,20 @@
                 
                 raise_layer {
 // .----------------------------------------------------------------.       .-----------------------------------------------------------------.
-// |   CMD+SHIFT+4  |       |   PU   |   UP   |    PD    |   HOME   |       |  HOME   |    PD    |   PU    |   END   |          | CMD+SHIFT+4 |
+// |                |       |        |        |          |          |       |  HOME   |    PD    |   PU    |   END   |          | CMD+SHIFT+4 |
 // |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
-// |                |       |  LEFT  |  DOWN  |   RIGHT  |   END    |       |  LEFT   |   DOWN   |   UP    |  RIGHT  |          |             |
+// |                |       |        |        |          |          |       |  LEFT   |   DOWN   |   UP    |  RIGHT  |          |             |
 // |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
-// |     OUT_TOG    |       |        |        |CTRL+LEFT |CTRL+RIGHT|       |CTRL+LEFT|CTRL+RIGHT|         |         |          |   OUT_TOG   |
+// |                |       |        |        |          |          |       |CTRL+LEFT|CTRL+RIGHT|         |         |          |   OUT_TOG   |
 // '---------------------------------+--------+----------+----------+       |---------+----------+---------+----------------------------------'
 //                                   |  GUI   |   MO3    |          |       |         | LSHIFT   |         |
 //                                   '--------+----------+----------'       '---------+----------+---------'
 
                         bindings = <
-   &trans &kp LG(LS(N4))  &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN       &kp HOME               &kp HOME            &kp PAGE_DOWN        &kp PAGE_UP   &kp END         &trans  &kp LG(LS(N4)) &trans
-          &trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END                &kp LEFT_ARROW      &kp DOWN_ARROW       &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
-          &out OUT_TOG    &trans  &trans          &trans          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)    &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans        &trans           &trans    &out OUT_TOG
-                                                  &kp LGUI        &mo ADJUST          &trans                 &trans              &kp LSHFT            &trans
+   &none  &none  &none  &none  &none     &none       &none     &kp HOME            &kp PAGE_DOWN        &kp PAGE_UP   &kp END          &none  &kp LG(LS(N4)) &none
+          &none  &none  &none  &none     &none       &none     &kp LEFT_ARROW      &kp DOWN_ARROW       &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
+          &none  &none  &none  &none     &none       &none     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none         &none            &none  &out OUT_TOG
+                               &kp LGUI  &mo ADJUST  &none     &none               &kp LSHFT            &none
                         >;
                 };
 
