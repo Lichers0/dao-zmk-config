@@ -110,7 +110,7 @@
       
       combo_rus_symb_brct {
         timeout-ms = <50>;
-        key-positions = <32 34>;
+        key-positions = <31 33>;
         bindings = <&kp RBKT>;
       };          
 };    
