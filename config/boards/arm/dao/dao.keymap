@@ -108,7 +108,7 @@
         bindings = <&tog MY1>;
       };          
       
-      combo_number {
+      combo_rus_symb_brct {
         timeout-ms = <50>;
         key-positions = <32 34>;
         bindings = <&kp RBKT>;
