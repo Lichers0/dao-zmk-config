@@ -107,6 +107,12 @@
         key-positions = <30 33>;
         bindings = <&tog MY1>;
       };          
+      
+      combo_number {
+        timeout-ms = <50>;
+        key-positions = <32 34>;
+        bindings = <&kp RBKT>;
+      };          
 };    
 
         keymap {
@@ -116,35 +122,35 @@
 // .--------------------------------------------------------------.       .-------------------------------------------------------------.
 // |   ESC        |    Q    |    W   |   E    |  R MY2  |    T    |       |   Y     |  U MY2  |    I    |    O    |     P    |    [     |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
-// |   CTRL/Tab   |    A    |    S   |   D    |  F|MN1  | G|NAVI  |       |   H     |    J    |    K    |    L    |     ;    |     '    |
+// |   CTRL/Tab   |    A    |    S   | D|MY2  |  F|MN1  | G|NAVI  |       |   H     |    J    | K|MY2   |    L    |     ;    |     '    |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
 // |   SHFT       |    Z    |    X   |   C    |  V|MY1  |    B    |       |   N     |  M|MY1  |    ,    |    .    |     /    |          |
 // '---------------------------------+--------+---------+---------+       |---------+---------+---------+-------------------------------'
 //                                   |  GUI   |   MY2   | repeat  |       |  SPC    |   BKSP  |  CAPS   |
 //                                   '--------+---------+---------'       '---------+---------+---------'
                         bindings = <
-   &trans &kp ESC        &kp Q       &kp W     &kp E     &lt MY2 R  &kp T          &kp Y      &lt MY2 U  &kp I         &kp O    &kp P     &kp LBKT  &trans
-          &mt LCTRL TAB  &kp A       &kp S     &kp D     &lt MN1 F  &lt NAVI G     &kp H      &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
-          &kp LSHFT      &kp Z       &kp X     &kp C     &lt MY1 V  &kp B          &kp N      &lt MY1 M  &kp COMMA     &kp DOT  &kp FSLH  &none
-                                               &kp LGUI  &tog MY2   &key_repeat    &kp SPACE  &kp BSPC   &kp CAPSLOCK  
+   &trans &kp ESC        &kp Q  &kp W  &kp E      &lt MY2 R  &kp T          &kp Y      &lt MY2 U  &kp I         &kp O    &kp P     &kp LBKT  &trans
+          &mt LCTRL TAB  &kp A  &kp S  &lt MY2 D  &lt MN1 F  &lt NAVI G     &kp H      &kp J      &lt MY2 K     &kp L    &kp SEMI  &kp SQT
+          &kp LSHFT      &kp Z  &kp X  &kp C      &lt MY1 V  &kp B          &kp N      &lt MY1 M  &kp COMMA     &kp DOT  &kp FSLH  &none
+                                        &kp LGUI  &tog MY2   &key_repeat    &kp SPACE  &kp BSPC   &kp CAPSLOCK  
                         >;
                 };
                 
                 my_num_1 {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
+// |              |         |        |        |         |         |       |       |         |         |         |          |          |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |              |    !    |    @   |   #    |    $    |    %    |       |   ^   |    &    |    *    |    (    |     )    |          |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |              |    1    |    2   |   3    |    4    |    5    |       |   6   |    7    |    8    |    9    |     0    |          |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |              |         |        |        |         |         |       |       |         |         |         |          |          |
 // '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
 //                                   |        |         |         |       |       |         |         |
 //                                   '--------+---------+---------'       '-------+---------+---------'
                         bindings = <
-   &trans  &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans  &trans
-           &trans  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
-           &trans  &trans    &trans  &trans    &trans    &trans           &trans     &trans    &trans    &trans    &trans    &trans
-                                     &trans    &trans    &trans           &trans     &trans    &trans
+    &trans  &trans  &trans    &trans  &trans    &trans    &trans           &trans     &trans    &trans    &trans    &trans    &trans  &trans
+            &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
+            &trans  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
+                                      &trans    &trans    &trans           &trans     &trans    &trans
                         >;
                 
                 };
@@ -161,8 +167,8 @@
 //                              '---------+---------+---------'       '---------+---------+---------'
                         bindings = <
    &none  &none  &none  &kp TILDE  &kp PLUS   &kp LBRC      &kp BSLH         &kp DQT    &kp RBRC  &kp MINUS  &kp QMARK  &none  &none  &none
-          &none  &none  &none      &kp EQUAL  &lt MN1 LPAR  &lt NAVI PIPE    &kp SQT    &kp RPAR  &kp UNDER  &none      &none  &none
-          &none  &none  &none      &kp LT     &kp LBKT      &kp FSLH         &kp GRAVE  &kp RBKT  &kp GT     &none      &none  &none
+          &none  &none  &none      &kp EQUAL  &lt MN1 LBKT  &lt NAVI PIPE    &kp SQT    &kp RBKT  &kp UNDER  &none      &none  &none
+          &none  &none  &none      &kp LT     &kp LPAR      &kp FSLH         &kp GRAVE  &kp RPAR  &kp GT     &none      &none  &none
                                    &kp LGUI   &tog MY2      &mo ADJUST       &kp SPACE  &kp BSPC  &mo NUMB
                         >;
                 
