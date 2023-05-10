@@ -120,7 +120,7 @@
 
                 default_layer {
 // .--------------------------------------------------------------.       .-------------------------------------------------------------.
-// |   ESC        |    Q    |    W   |   E    |  R MY2  |    T    |       |   Y     |  U MY2  |    I    |    O    |     P    |    [     |
+// |   ESC        |    Q    |    W   |   E    |    R    |    T    |       |   Y     |    U    |    I    |    O    |     P    |    [     |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
 // |   CTRL/Tab   |    A    |    S   | D|MY2  |  F|MN1  | G|NAVI  |       |   H     |    J    | K|MY2   |    L    |     ;    |     '    |
 // |--------------+---------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+----------|
@@ -129,7 +129,7 @@
 //                                   |  GUI   | ru/en   | repeat  |       |  SPC    |   BKSP  |  CAPS   |
 //                                   '--------+---------+---------'       '---------+---------+---------'
                         bindings = <
-   &trans &kp ESC        &kp Q  &kp W  &kp E      &lt MY2 R          &kp T          &kp Y      &lt MY2 U  &kp I         &kp O    &kp P     &kp LBKT  &trans
+   &trans &kp ESC        &kp Q  &kp W  &kp E      &kp R              &kp T          &kp Y      &kp U      &kp I         &kp O    &kp P     &kp LBKT  &trans
           &mt LCTRL TAB  &kp A  &kp S  &lt MY2 D  &lt MN1 F          &lt NAVI G     &kp H      &kp J      &lt MY2 K     &kp L    &kp SEMI  &kp SQT
           &kp LSHFT      &kp Z  &kp X  &kp C      &lt MY1 V          &kp B          &kp N      &lt MY1 M  &kp COMMA     &kp DOT  &kp FSLH  &none
                                        &kp LGUI   &kp LC(LS(SPACE))  &key_repeat    &kp SPACE  &kp BSPC   &kp CAPSLOCK  
